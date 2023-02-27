@@ -1,0 +1,139 @@
+body {
+    /* margin: 0; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://www.lih.lu/wp-content/uploads/2022/01/events-scaled.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* height: 100vh; */
+}
+main {
+    display: flex;
+}
+#about , #events {
+    margin: 15px;
+}
+#about header {
+    width: 80%;
+}
+#about {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255,255,255,0.444);
+    z-index: -1;
+}
+#about::after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255,255,255,0.444);
+    z-index: -2;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.74);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.74);
+}
+#events {
+    height: 100vh;
+    overflow: auto;
+    padding-right: 10px;
+}
+.event {
+    background-color: white;
+    display: flex;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.74);
+}
+/* .flex-item:first-child .date{
+    background-color: rgb(227, 176, 109);
+} */
+.flex-item:nth-child(even) .date{
+    background-color: rgb(235, 235, 235);
+}
+.flex-item:nth-child(even) .event-details{
+    background-color: white;
+}
+.date {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.day {
+    font-size: 50px;
+    margin: 0;
+}
+.month {
+    font-size: 30px;
+    margin: 0;
+}
+.event-details {
+    padding: 15px;
+    background-color: rgb(235, 235, 235);
+}
+.event-details h2 {
+    margin: 0;
+}
+.text-blue {
+    color: rgb(45, 45, 154);
+
+}
+.Show-more {
+    text-decoration: none;
+    background-color: rgb(236, 158, 56);
+    color: white;
+    padding: 5px;
+}
+.Show-more:hover {
+    background-color: rgb(227, 176, 109);
+}
+.flex-item {
+    margin: 35px;
+}
+.event:hover {
+    opacity: 0.8;
+}
+header > h3 {
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    main {
+        flex-direction: column;
+    }
+    #events {
+        height: auto;
+        overflow: visible;
+    }
+    #about::before ,#about::after , #about {
+        height: 300px;
+    }
+}
+@media screen and (min-width: 701px) {
+    #about {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .event {
+        width:843px;
+    }
+}
